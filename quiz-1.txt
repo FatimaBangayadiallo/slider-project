@@ -1,0 +1,74 @@
+.
+
+🧠 Part 1: Core Concepts
+What does this.currentSlide = 0; represent inside the constructor?
+a) The number of slides
+b) The current slide index
+c) The total slide length
+d) Nothing, it's unused
+rep:
+1.b) the current slide index.
+
+Why do we bind this.nextSlide and this.prevSlide?
+a) To avoid errors inside arrow functions
+b) So the methods don’t run immediately
+c) To ensure this refers to the class instance
+d) To prevent infinite loops
+ 1.C) to ensure this refers to the class instance
+
+In showSlide(index), why do we remove 'active' from all slides first?
+rep:
+we remove active form all the slidres because we only want to show currentSlide not all of them at ones 
+
+What does the line this.slides[index].classList.add('active') do?
+rep:
+it give current slide his index and add the active class on it so that we can display that slide
+
+What does this block ensure in nextSlide()?
+
+js
+Copy
+Edit
+if (this.currentSlide >= this.slides.length) {
+    this.currentSlide = 0;
+}
+rep:
+it makes sure that when we reach the last slide we have to come back to the first slide again
+
+If this.currentSlide = 0, and the user clicks "prev", what will happen?
+rep: it will take us to the last slide
+
+==============================================
+🔧 Part 2: Code Correction
+There is a typo in the following line. Can you spot and correct it?
+
+js
+Copy code
+this.prevBtn.addEventListener('click', this.prevSlide);
+===========================================
+
+=============================================
+
+
+🧠 Part 3: Short Answer
+What would happen if we didn’t use .bind(this) for the methods in the constructor?
+We have to use it on the constrocture so that we can put methode on the prototype
+
+How would you modify the class so that the slider can auto-play every 3 seconds?
+rep I do not know how to do that please
+
+
+============================================
+
+
+==============================================
+
+?
+
+💬 Bonus Reflection
+How did this project help you better understand JavaScript classes or DOM manipulation? (Just a short sentence is fine.)
+
+this project help to undertand that we can organise all the in one class also changin our element in the dom all in one place without roaming arround
+
+
+
